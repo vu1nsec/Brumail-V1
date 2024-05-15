@@ -101,6 +101,8 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         file_builder.write(f"{brute_list}")
         file_builder.close()
         time.sleep(1)
+        print(f"{Fore.GREEN}[+]{Fore.WHITE} File Created !")
+        time.sleep(1)
         return main()
 
 #===================================================================================================================#
@@ -165,6 +167,8 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         file_builder = open(f"{username}-Yahoo-List.txt", "w+")
         file_builder.write(f"{brute_list}")
         file_builder.close()
+        time.sleep(1)
+        print(f"{Fore.GREEN}[+]{Fore.WHITE} File Created !")
         time.sleep(1)
         return main()
 
