@@ -222,8 +222,6 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
 #===================================================================================================================#
 #===================================================================================================================#
 
-
-
     main_1_reponse = input(Colorate.Color(Colors.yellow, "                                              [+] Choose : "))
     if main_1_reponse == "1":
         gmail_gathering()
