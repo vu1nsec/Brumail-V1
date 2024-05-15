@@ -4,6 +4,9 @@ from colorama import Fore
 import time
 import os
 
+# def install_requirements():
+#    system('pip install pystyle')
+#    system('pip install colorama')
 
 def cmdconfig():
     system('title Brumail v1.0 VulnSec')
@@ -13,43 +16,69 @@ def cmdconfig():
 def clear():
     system('cls')
 
+def leave():
+    system('exit')
+
 def main():
     clear()
-    print(f"""{Fore.YELLOW}____________ _   ____  ___  ___  _____ _     
-{Fore.YELLOW}| ___ \ ___ \ | | |  \/  | / _ \|_   _| |    
-{Fore.YELLOW}| |_/ / |_/ / | | | .  . |/ /_\ \ | | | |    
-{Fore.YELLOW}| ___ \    /| | | | |\/| ||  _  | | | | |    
-{Fore.YELLOW}| |_/ / |\ \| |_| | |  | || | | |_| |_| |____
-{Fore.YELLOW}\____/\_| \_|\___/\_|  |_/\_| |_/\___/\_____/{Fore.WHITE}
+    print(f""" 
+                               {Fore.YELLOW}____________ _   ____  ___  ___  _____ _     
+                               {Fore.YELLOW}| ___ \ ___ \ | | |  \/  | / _ \|_   _| |    
+                               {Fore.YELLOW}| |_/ / |_/ / | | | .  . |/ /_\ \ | | | |    
+                               {Fore.YELLOW}| ___ \    /| | | | |\/| ||  _  | | | | |    
+                               {Fore.YELLOW}| |_/ / |\ \| |_| | |  | || | | |_| |_| |____
+                               {Fore.YELLOW}\____/\_| \_|\___/\_|  |_/\_| |_/\___/\_____/{Fore.WHITE}
+                                
+                                    {Fore.RED}[|]{Fore.WHITE} https://github.com/vu1nsec {Fore.RED}[|]{Fore.WHITE}
+                                    {Fore.RED}[|]{Fore.WHITE}           v1.0 {Fore.RED}            [|]{Fore.WHITE}""")
 
-
-{Fore.RED}[*]{Fore.WHITE} https://github.com/vu1nsec
-{Fore.RED}[*]{Fore.WHITE} v1.0""")
     print(f"""          
 
-{Fore.YELLOW}[1]{Fore.WHITE} Gmail
-{Fore.YELLOW}[2]{Fore.WHITE} Yahoo
-{Fore.YELLOW}[3]{Fore.WHITE} Outlook
-{Fore.YELLOW}[4]{Fore.WHITE} Proton
-{Fore.YELLOW}[5]{Fore.WHITE} iCloud
+                                              {Fore.YELLOW}[1]{Fore.WHITE} GMAIL
+                                              {Fore.YELLOW}[2]{Fore.WHITE} YAHOO
+                                              {Fore.YELLOW}[3]{Fore.WHITE} OUTLOOK
+                                              {Fore.YELLOW}[4]{Fore.WHITE} PROTON
+                                              {Fore.YELLOW}[5]{Fore.WHITE} ICLOUD
         
 """)
     
 #===================================================================================================================
 #===================================================================================================================
-    
+
+    def back_to_main():
+        print(f"{Fore.GREEN}[+]{Fore.WHITE} Going back to Main...")
+        time.sleep(1)
+        return main()
+
     def gmail_gathering():
         clear()
         print(Colorate.Color(Colors.yellow, "Informations Needed : Username, Name, Lastname, Dob, Zipcode\n"))
         username = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Username : ").lower()
         if username == "":
-            print("[!] Invalid Username.")
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Username")
+            time.sleep(1)
             return gmail_gathering()
         name     = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Name     : ").lower()
+        if name == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Name")
+            time.sleep(1)
+            return gmail_gathering()
         lastname = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Lastname : ").lower()
+        if lastname == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Lastname")
+            time.sleep(1)
+            return gmail_gathering()
         dob      = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Dob Year : ").lower()
+        if dob == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Dob Year")
+            time.sleep(1)
+            return gmail_gathering()
         zipcode  = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Zipcode  : ").lower()
-
+        if zipcode == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Zipcode")
+            time.sleep(1)
+            return gmail_gathering()
+        
         brute_list = f"""
                      Brumail v1.0 - Made By VulnSec
                             
@@ -102,8 +131,7 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         file_builder.close()
         time.sleep(1)
         print(f"{Fore.GREEN}[+]{Fore.WHITE} File Created !")
-        time.sleep(1)
-        return main()
+        back_to_main()
 
 #===================================================================================================================#
 #===================================================================================================================#
@@ -112,10 +140,30 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         clear()
         print(Colorate.Color(Colors.yellow, "Informations Needed : Username, Name, Lastname, Dob, Zipcode\n"))
         username = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Username : ").lower()
+        if username == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Username")
+            time.sleep(1)
+            return yahoo_gathering()
         name     = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Name     : ").lower()
+        if name == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Name")
+            time.sleep(1)
+            return yahoo_gathering()
         lastname = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Lastname : ").lower()
+        if lastname == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Lastname")
+            time.sleep(1)
+            return yahoo_gathering()
         dob      = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Dob Year : ").lower()
+        if dob == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Dob Year")
+            time.sleep(1)
+            return yahoo_gathering()
         zipcode  = input(f"{Fore.YELLOW}[+]{Fore.WHITE} Zipcode  : ").lower()
+        if zipcode == "":
+            print(f"{Fore.RED}[!]{Fore.WHITE} Invalid Zipcode")
+            time.sleep(1)
+            return yahoo_gathering()
 
         brute_list = f"""
                      Brumail v1.0 - Made By VulnSec
@@ -169,15 +217,14 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         file_builder.close()
         time.sleep(1)
         print(f"{Fore.GREEN}[+]{Fore.WHITE} File Created !")
-        time.sleep(1)
-        return main()
+        back_to_main()
 
 #===================================================================================================================#
 #===================================================================================================================#
 
 
 
-    main_1_reponse = input(Colorate.Color(Colors.yellow, "[+] Choose : "))
+    main_1_reponse = input(Colorate.Color(Colors.yellow, "                                              [+] Choose : "))
     if main_1_reponse == "1":
         gmail_gathering()
 
@@ -198,15 +245,10 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
         print("Soon...")
         time.sleep(1)
         return main()
-    
-    if main_1_reponse != int:
-        print("Error")
-        time.sleep(1)
-        return main()
-
 
 if __name__ == "__main__":
 
+    # install_requirements()
     cmdconfig()
     main()
 
