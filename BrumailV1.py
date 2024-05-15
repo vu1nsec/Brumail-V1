@@ -16,9 +16,6 @@ def cmdconfig():
 def clear():
     system('cls')
 
-def leave():
-    system('exit')
-
 def main():
     clear()
     print(f""" 
@@ -226,21 +223,26 @@ For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
     if main_1_reponse == "1":
         gmail_gathering()
 
-    if main_1_reponse == "2":
+    elif main_1_reponse == "2":
         yahoo_gathering()
 
-    if main_1_reponse == "3":
+    elif main_1_reponse == "3":
         print("Soon...")
         time.sleep(1)
         return main()
 
-    if main_1_reponse == "4":
+    elif main_1_reponse == "4":
         print("Soon...")
         time.sleep(1)
         return main()
 
-    if main_1_reponse == "5":
+    elif main_1_reponse == "5":
         print("Soon...")
+        time.sleep(1)
+        return main()
+    
+    else:
+        print(f"{Fore.RED}                                              [-]{Fore.WHITE} Error !")
         time.sleep(1)
         return main()
 
