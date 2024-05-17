@@ -119,7 +119,7 @@ Epieos Check Links :
 - Epieos: https://epieos.com/?q={name}{zipcode}@gmail.com&t=email
 
 ***************************************************************************
-For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
+Github https://github.com/vu1nsec
 """
 
         print(Colorate.Color(Colors.yellow, "\nCreating file..."))
@@ -205,7 +205,7 @@ Epieos Check Links :
 - Epieos: https://epieos.com/?q={name}{zipcode}@yahoo.com.com&t=email
 
 ***************************************************************************
-For any question contact vulnsec on Discord. Github https://github.com/vu1nsec
+Github https://github.com/vu1nsec
 """
 
         print(Colorate.Color(Colors.yellow, "\nCreating file..."))
